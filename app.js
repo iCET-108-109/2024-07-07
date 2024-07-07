@@ -3,12 +3,10 @@
 
 let tblCountries = document.getElementById("tblCountries");
 
-let tableBody = `      <tr>
-            <th>Name</th>
-            <th>Falg</th>
-        </tr>` ;
-
-
+let tableBody = `<tr>
+                    <th>Name</th>
+                    <th>Falg</th>
+                </tr>` ;
 
 fetch("https://restcountries.com/v3.1/all")
 .then((res)=>res.json())
@@ -26,7 +24,7 @@ fetch("https://restcountries.com/v3.1/all")
                         </td>
                         <td><img src="${element.flags.png}" alt=""></td>
                     </tr>`
-        console.log(element.name.common);
+        console.log(element.currencies);
     });
 
     tblCountries.innerHTML=tableBody;
