@@ -17,8 +17,8 @@ fetch("https://restcountries.com/v3.1/all")
     data.forEach(element => {
 
         tableBody+=`<tr>
-                        <td>${element.name.common}</td>
-                        <td>${element.flag}</td>
+                        <td><h1>${element.name.common}</h1> <br> ${element.name.official}</td>
+                        <td><img src="${element.flags.png}" alt=""></td>
                     </tr>`
         console.log(element.name.common);
     });
